@@ -4,9 +4,11 @@ def get_num_words(input):
 
 def get_num_letters(input):
     final_dict = {}
-    word_count = input.split()
-    for word in word_count:
-        word.lower()
-        final_dict[word] += 1
+    for i in input:
+        letter = i.lower()
+        if letter in final_dict:
+            final_dict[letter] += 1
+        else:
+            final_dict[letter] = 1
     return final_dict
 
